@@ -95,12 +95,15 @@ public:
     float Keliling(int p, int l) {
         return 2 * (p + l);
     }
+
+
 };
 
 int main() {
     biadangDatar* bd;
-    
+    int next;
 
+    do {
     cout << "Lingkaran dibuat" << endl;
     bd = new Lingkaran();                                        // Operator new digunakan untuk mengalokasikan memori dan membuat objek dari kelas turunan,  kemudian ditunjuk oleh pointer bd.
     bd->input();
@@ -118,8 +121,13 @@ int main() {
     cout << "Keliling persegi panjang = " << bd->Keliling(bd->getX()) << endl;
 
     delete bd;
+
     
-    return 0;
+    cout << " apakah anda ingin mengulang program(Y/N) :";
+    cin >> next;
+
+} while (next == 'Y');
+return 0;
 
 };
 
